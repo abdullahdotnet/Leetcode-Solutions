@@ -1,0 +1,2 @@
+def hIndex(citations):
+    pass
