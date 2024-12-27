@@ -10,7 +10,7 @@
 #     return res
 def generate(numRows):
         triangle = []
-
+        
         for row_num in range(numRows):
             row = [ None ] * ( row_num + 1) 
             row[0], row[-1] = 1, 1
@@ -22,4 +22,4 @@ def generate(numRows):
             triangle.append(row)
 
         return triangle
-print(generate(5))
+print(generate(0))
