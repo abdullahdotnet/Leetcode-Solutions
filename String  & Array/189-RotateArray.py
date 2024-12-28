@@ -20,14 +20,32 @@
 #         nums[:k],nums[k:] = nums[-k:],nums[:-k]
 #     return nums
 
+# def rotateArray(nums,k):
+#     k%=len(nums)
+#     def reverse(left,right):
+#         while left < right:
+#             nums[left],nums[right] = nums[right],nums[left]
+#             left+=1
+#             right-=1
+#     reverse(0,len(nums)-1)
+#     reverse(0,k-1)
+#     reverse(k,len(nums)-1)
+
+
+
+
+
+
+
+
+
+
+
+
+
 def rotateArray(nums,k):
-    k%=len(nums)
-    def reverse(left,right):
-        while left < right:
-            nums[left],nums[right] = nums[right],nums[left]
-            left+=1
-            right-=1
-    reverse(0,len(nums)-1)
-    reverse(0,k-1)
-    reverse(k,len(nums)-1)
+    n = len(nums)
+    k%=n
+    nums[0:k],nums[k:n] = nums[k:n],nums[0:k]
+    return nums
 print(rotateArray([-1,-100,3,99],2))
